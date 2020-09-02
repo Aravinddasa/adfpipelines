@@ -1,0 +1,11 @@
+{
+	"name": "AzureDemoBlobStorage",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"serviceEndpoint": "https://demostgact.blob.core.windows.net",
+			"accountKind": "BlobStorage"
+		}
+	}
+}
