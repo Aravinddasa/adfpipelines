@@ -1,0 +1,21 @@
+{
+	"name": "AzureDataExplorer1",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDataExplorer",
+		"typeProperties": {
+			"endpoint": "https://demos.eastus.kusto.windows.net",
+			"tenant": "4f5b8ccd-bdcf-4f83-b071-b5b92874a468",
+			"servicePrincipalId": "4f5b8ccd-bdcf-4f83-b071-b5b92874a469",
+			"servicePrincipalKey": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault1",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "pwd"
+			},
+			"database": "demo"
+		}
+	}
+}
