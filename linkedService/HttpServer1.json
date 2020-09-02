@@ -1,0 +1,21 @@
+{
+	"name": "HttpServer1",
+	"properties": {
+		"annotations": [],
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "google.com",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Basic",
+			"userName": "abcd",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault1",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "pwd"
+			}
+		}
+	}
+}
