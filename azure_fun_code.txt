@@ -1,0 +1,50 @@
+#r "Newtonsoft.Json"
+//#r "Newtonsoft.Json.Linq"
+
+using System.Net;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Primitives;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System.Collections.Generic;
+
+public static async Task<IActionResult> Run(HttpRequest req, ILogger log)
+{
+    log.LogInformation("C# HTTP trigger function processed a request.");
+
+    string name = req.Query["name"];
+
+    string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+    dynamic data = JsonConvert.DeserializeObject(requestBody);
+    name = name ?? data?.name;
+
+    var obj = JsonConvert.DeserializeObject(requestBody) as JObject;    
+    var props = GetFlattenProps(string.Empty, obj);
+    //props.Dump();
+    foreach (var x in props)
+            {
+                Console.WriteLine(x.ToString());
+            }
+
+    string responseMessage = string.IsNullOrEmpty(name)
+        ? "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response."
+                : $"Hello, {name}. This HTTP triggered function executed successfully.";
+
+            return (ActionResult) new OkObjectResult(props);//new {Hello="hi"}
+}
+
+private static IEnumerable<Tuple<string, string>> GetFlattenProps(string currPath, JObject obj)
+{
+    foreach(var prop in obj.Properties())
+    {
+        var propPath = string.IsNullOrWhiteSpace(currPath) ? prop.Name : currPath + "." + prop.Name;
+
+        if (prop.Value.Type == JTokenType.Object)
+        {   
+            foreach(var subProp in GetPropPaths(propPath, prop.Value as JObject))
+                yield return subProp;
+        } else {
+            yield return new Tuple<string, string>(propPath, prop.Value.ToString());
+        }
+    }
+}

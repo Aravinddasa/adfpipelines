@@ -1,0 +1,94 @@
+{
+  "business_id": "b9WZJp5L1RZr4F1nxclOoQ",
+  "full_address": "1073 Washington Ave\nCarnegie, PA 15106",
+  "hours": {
+    "Monday": {
+      "close": "14:30",
+      "open": "06:00"
+    },
+    "Tuesday": {
+      "close": "14:30",
+      "open": "06:00"
+    },
+    "Friday": {
+      "close": "14:30",
+      "open": "06:00"
+    },
+    "Wednesday": {
+      "close": "14:30",
+      "open": "06:00"
+    },
+    "Thursday": {
+      "close": "14:30",
+      "open": "06:00"
+    },
+    "Sunday": {
+      "close": "12:30",
+      "open": "07:00"
+    },
+    "Saturday": {
+      "close": "12:30",
+      "open": "06:00"
+    }
+  },
+  "open": true,
+  "categories": ["Breakfast & Brunch", "Restaurants"],
+  "city": "Carnegie",
+  "review_count": 38,
+  "name": "Gab & Eat",
+  "neighborhoods": [],
+  "longitude": -80.084799799999999,
+  "state": "PA",
+  "stars": 4.5,
+  "latitude": 40.396744099999999,
+  "attributes": {
+    "Alcohol": "none",
+    "Noise Level": "average",
+    "Has TV": true,
+    "Attire": "casual",
+    "Ambience": {
+      "romantic": false,
+      "intimate": false,
+      "classy": false,
+      "hipster": false,
+      "divey": true,
+      "touristy": false,
+      "trendy": false,
+      "upscale": false,
+      "casual": true
+    },
+    "Good for Kids": true,
+    "Wheelchair Accessible": false,
+    "Delivery": false,
+    "Caters": true,
+    "BYOB": false,
+    "Corkage": false,
+    "Accepts Credit Cards": false,
+    "BYOB/Corkage": "yes_free",
+    "Take-out": true,
+    "Price Range": 1,
+    "Outdoor Seating": false,
+    "Takes Reservations": false,
+    "Waiter Service": true,
+    "Wi-Fi": "no",
+    "Order at Counter": true,
+    "Good For": {
+      "dessert": false,
+      "latenight": false,
+      "lunch": false,
+      "dinner": false,
+      "brunch": false,
+      "breakfast": true
+    },
+    "Parking": {
+      "garage": false,
+      "street": false,
+      "validated": false,
+      "lot": true,
+      "valet": false
+    },
+    "Good For Kids": true,
+    "Good For Groups": false
+  },
+  "type": "business"
+}
