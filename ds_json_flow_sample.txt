@@ -1,0 +1,26 @@
+{
+"itemid": "0001",
+"itemtype": "donut",
+"name": "Cake",
+"ppu": 0.55,
+"batters":
+  {
+"batter":
+    [
+     { "batterid": "1001", "batteridtype": "Regular" },
+     { "batterid": "1002", "batteridtype": "Chocolate" },
+     { "batterid": "1003", "batteridtype": "Blueberry" },
+     { "batterid": "1004", "batteridtype": "Devil's Food" }
+    ]
+  },
+"topping":
+  [
+   { "toppingid": "5001", "toppingtype": "None" },
+   { "toppingid": "5002", "toppingtype": "Glazed" },
+   { "toppingid": "5005", "toppingtype": "Sugar" },
+   { "toppingid": "5007", "toppingtype": "Powdered Sugar" },
+   { "toppingid": "5006", "toppingtype": "Chocolate with Sprinkles" },
+   { "toppingid": "5003", "toppingtype": "Chocolate" },
+   { "toppingid": "5004", "toppingtype": "Maple" }
+  ]
+}
